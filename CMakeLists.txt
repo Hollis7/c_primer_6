@@ -16,9 +16,22 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 # 包含头文件目录
 include_directories(include)
 
-# 添加可执行文件
-add_executable(hello src/ch1/hello.c)
-add_executable(ex1 src/ch1/ex1.c)
+# 查找src/ch1目录下的所有.c文件
+file(GLOB CH1_SOURCES "src/ch1/*.c")
+
+# 查找src/ch2目录下的所有.c文件
+file(GLOB CH2_SOURCES "src/ch2/*.c")
+
+# 为每个源文件创建可执行文件
+foreach(source ${CH1_SOURCES})
+    get_filename_component(executable ${source} NAME_WE)
+    add_executable(${executable} ${source})
+endforeach()
+
+foreach(source ${CH2_SOURCES})
+    get_filename_component(executable ${source} NAME_WE)
+    add_executable(${executable} ${source})
+endforeach()
 
 # 如果你有库文件需要链接，可以这样添加
 # target_link_libraries(hello mylib)

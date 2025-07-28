@@ -22,6 +22,8 @@ file(GLOB CH1_SOURCES "src/ch1/*.c")
 # 查找src/ch2目录下的所有.c文件
 file(GLOB CH2_SOURCES "src/ch2/*.c")
 
+file(GLOB CH3_SOURCES "src/ch3/*.c")
+
 # 为每个源文件创建可执行文件
 foreach(source ${CH1_SOURCES})
     get_filename_component(executable ${source} NAME_WE)
@@ -33,5 +35,9 @@ foreach(source ${CH2_SOURCES})
     add_executable(${executable} ${source})
 endforeach()
 
+foreach(source ${CH3_SOURCES})
+    get_filename_component(executable ${source} NAME_WE)
+    add_executable(${executable} ${source}  )
+endforeach()
 # 如果你有库文件需要链接，可以这样添加
 # target_link_libraries(hello mylib)

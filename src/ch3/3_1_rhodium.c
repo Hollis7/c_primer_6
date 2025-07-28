@@ -1,10 +1,3 @@
-/*************************************************************************
-	> File Name: 3_1_rhodium.c
-	> Author: Hui Wang
-	> Mail: ncepuwanghui@gmail.com 
-	> Created Time: Tue 10 Jun 2014 04:40:17 PM CST
- ************************************************************************/
-
 #include <stdio.h>
 
 int main(void)

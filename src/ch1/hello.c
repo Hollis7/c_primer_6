@@ -1,13 +1,13 @@
-#include<string.h>
-#include <stdio.h>  
-int main(){
-    int a =0;
-    printf("hello world\n");
-    int c = 0;
-    c +=1;
-    char *p  = "hello world";
-    printf("c = %d\n", c);
-    printf("strlen(p) = %zu\n", strlen(p));
-    printf("p[1] = %c\n", p[1]);
+#include <string.h>
+#include <stdio.h>
+add(float a, float b)
+{
+    return a + b;
+}
+int main()
+{
+    float x = 1.0, y = 2.0;
+    auto result = add(x, y);
+    printf("%f\n", result);
     return 0;
 }

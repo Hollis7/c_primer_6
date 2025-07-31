@@ -7,7 +7,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # 调试模式下的编译选项
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_compile_options(-g -O0)  # -g 生成调试信息，-O0 禁用优化
+    add_compile_options(-g -O0) # -g 生成调试信息，-O0 禁用优化
 endif()
 
 # 设置输出目录
@@ -37,7 +37,7 @@ endforeach()
 
 foreach(source ${CH3_SOURCES})
     get_filename_component(executable ${source} NAME_WE)
-    add_executable(${executable} ${source}  )
+    add_executable(${executable} ${source})
 endforeach()
 # 如果你有库文件需要链接，可以这样添加
 # target_link_libraries(hello mylib)

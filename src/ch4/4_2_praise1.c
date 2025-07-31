@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #define PRAISE "What a super marvelous name!"
 
 int main(void)
